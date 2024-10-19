@@ -184,8 +184,8 @@ app.delete("/deleteProfile", async (req,res) => {
   }
 });
 
-app.listen(process.env.port, () => {
-  console.log(`Listening to Port ${process.env.port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Listening to Port ${process.env.PORT}`);
 });
 
 let connectToDB = async () => {
