@@ -17,7 +17,7 @@ function Dashboard() {
         let reqOptions ={
             method:"DELETE",
         }
-        let jsonData = await fetch(`http://localhost:4567/deleteProfile?email=${storeObj.loginDetails.email}`,reqOptions);
+        let jsonData = await fetch(`/deleteProfile?email=${storeObj.loginDetails.email}`,reqOptions);
         let jsoData = await jsonData.json();
         alert(jsoData.msg);
     };
@@ -58,7 +58,7 @@ function Dashboard() {
                 <>
                     <h1>{loginDetails.firstName} {loginDetails.lastName}</h1>
                     <img 
-                        src={`http://localhost:4567/${loginDetails.profilePic}`} 
+                        src={`/${loginDetails.profilePic}`} 
                         alt={`${loginDetails.firstName} ${loginDetails.lastName}`} 
                     />
                 </>
